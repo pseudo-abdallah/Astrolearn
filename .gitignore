@@ -1,0 +1,25 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+# Dependencies and build outputs
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+dist/
+build/
+coverage/
+.pytest_cache/
+# Runtime data and large local assets
+runtime/
+captures/
+solver_indexes/
+model_weights/
+*.log
+*.sqlite
+*.sqlite3
+# Operating system files
+.DS_Store
+Thumbs.db
