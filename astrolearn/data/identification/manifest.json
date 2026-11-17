@@ -1,0 +1,17 @@
+{
+  "source": "https://github.com/dieghernan/celestial_data",
+  "revision": "44e2cf2c1290c41e9d93dc899ce6a784e011349b",
+  "license": "BSD-3-Clause",
+  "reference_frame": "J2000; static catalog without observation-epoch proper-motion correction",
+  "star_count": 41411,
+  "named_star_count": 541,
+  "object_count": 110,
+  "catalog_sha256": "c7349a4c41db422a0401f40905773e035d9d365a8e865e8e4f8a35b02f3f0220",
+  "source_files": {
+    "data/stars.8.min.geojson": "0b03c1df9c8ce2bef89dc1e700fd0483f3b61ea26b8da269bc42bcd0b707858f",
+    "data/starnames.csv": "79d9268d12e0e9a184a9d2dfe5679ad6d55f5c5672ebbd823875ff6d59624532",
+    "data/messier.min.geojson": "e5842c46bbe1e8e3230933b43fff27599bf48d6e134095b2b704811316ba0a76",
+    "LICENSE": "76ebe732785f84c58a5547c111dcbfe45444599a2ed368102c1bfa60568b39c6"
+  },
+  "attribution": "Olaf Frohn and Diego Hernangomez; celestial_data derived from d3-celestial; XHIP star compilation and Messier/SEDS source records."
+}

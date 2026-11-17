@@ -1,0 +1,20 @@
+[
+  {
+    "source": "https://ssd.jpl.nasa.gov/ftp/eph/satellites/bsp/jup365.bsp",
+    "file": "jup365-2025-2028.bsp",
+    "bytes": 1373856,
+    "sha256": "0ecd8d0338e27284c1a0e03651d5e2069d76b5c266ed71ff22a18d3b9da38e11",
+    "start_utc": "2025-01-02T00:00:00+00:00",
+    "end_utc": "2027-12-31T00:00:00+00:00",
+    "excerpt_requested": "2025-01-01/2028-01-01; one-day safety margin for light travel time"
+  },
+  {
+    "source": "https://ssd.jpl.nasa.gov/ftp/eph/satellites/bsp/sat441l.bsp",
+    "file": "sat441l-2025-2028.bsp",
+    "bytes": 371144,
+    "sha256": "db5960c7bb9f6906f01d4d2d190c8bb6c488ee29e0c82abd3fe66d65400fdf57",
+    "start_utc": "2025-01-02T00:00:00+00:00",
+    "end_utc": "2027-12-31T00:00:00+00:00",
+    "excerpt_requested": "2025-01-01/2028-01-01; one-day safety margin for light travel time"
+  }
+]

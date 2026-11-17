@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/mattiaverga/OpenNGC",
+  "revision": "be3cd6c5498806a2fbb2f7e0452ef802dbb02be0",
+  "attribution": "Mattia Verga and OpenNGC contributors",
+  "license": "CC-BY-SA-4.0",
+  "license_file": "OpenNGC-LICENSE.txt",
+  "changes": "Selected extended objects, excluded Messier duplicates, converted coordinates to degrees and formatted names.",
+  "object_count": 11994,
+  "source_sha256": "54abea0b57b0a103831bfc7a8e3a99a23acfbf4bb581fcf3d8af539cbb826c84",
+  "catalog_sha256": "48c8b89dab38f88485a5bc882484937d8cb8777ac73b486cf2902c2d2848b107"
+}

@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "status": "satellite excerpts installed; see docs/solar-system.md for current coverage, approximation and validation limits",
+  "reference": "https://ssd.jpl.nasa.gov/sats/ephem/files.html",
+  "coordinate_policy": "observer-dependent topocentric directions on the same celestial axes as the solved WCS; validate time coverage and distinguish barycenters from body centers",
+  "targets": [
+    {
+      "id": "mercury",
+      "naif_body_id": 199,
+      "type": "planet",
+      "base_pack": "DE421"
+    },
+    {
+      "id": "venus",
+      "naif_body_id": 299,
+      "type": "planet",
+      "base_pack": "DE421"
+    },
+    {
+      "id": "mars",
+      "naif_body_id": 499,
+      "type": "planet",
+      "base_pack": "DE421"
+    },
+    {
+      "id": "jupiter",
+      "naif_body_id": 599,
+      "type": "planet",
+      "precise_center_pack": "JUP365",
+      "existing_approximation": "Jupiter system barycenter"
+    },
+    {
+      "id": "saturn",
+      "naif_body_id": 699,
+      "type": "planet",
+      "precise_center_pack": "SAT441L",
+      "existing_approximation": "Saturn system barycenter"
+    },
+    {
+      "id": "uranus",
+      "naif_body_id": 799,
+      "type": "planet",
+      "status": "available in selector; system-barycenter approximation; dedicated body-center pack not installed"
+    },
+    {
+      "id": "neptune",
+      "naif_body_id": 899,
+      "type": "planet",
+      "status": "available in selector; system-barycenter approximation; dedicated body-center pack not installed"
+    },
+    {
+      "id": "moon",
+      "naif_body_id": 301,
+      "type": "moon",
+      "parent": "earth",
+      "base_pack": "DE421"
+    },
+    {
+      "id": "io",
+      "naif_body_id": 501,
+      "type": "moon",
+      "parent": "jupiter",
+      "required_pack": "JUP365",
+      "status": "local 2025-2028 excerpt installed; effective coverage in satellite-manifest.json"
+    },
+    {
+      "id": "europa",
+      "naif_body_id": 502,
+      "type": "moon",
+      "parent": "jupiter",
+      "required_pack": "JUP365",
+      "status": "local 2025-2028 excerpt installed; effective coverage in satellite-manifest.json"
+    },
+    {
+      "id": "ganymede",
+      "naif_body_id": 503,
+      "type": "moon",
+      "parent": "jupiter",
+      "required_pack": "JUP365",
+      "status": "local 2025-2028 excerpt installed; effective coverage in satellite-manifest.json"
+    },
+    {
+      "id": "callisto",
+      "naif_body_id": 504,
+      "type": "moon",
+      "parent": "jupiter",
+      "required_pack": "JUP365",
+      "status": "local 2025-2028 excerpt installed; effective coverage in satellite-manifest.json"
+    },
+    {
+      "id": "titan",
+      "naif_body_id": 606,
+      "type": "moon",
+      "parent": "saturn",
+      "required_pack": "SAT441L",
+      "status": "local 2025-2028 excerpt installed; effective coverage in satellite-manifest.json"
+    }
+  ],
+  "satellite_pack_policy": "Installed excerpts are explicitly prepared offline resources; runtime requests never download missing packs.",
+  "moon_label_policy": "A moon name requires adequate image scale and a measured position consistent with the parent-system geometry at the observation time. Unresolved, blended, occulted or ambiguous cases stay unconfirmed."
+}

@@ -1,0 +1,27 @@
+{
+  "image": "ee0a4eb96e3b448cabdc878e81de3307.png",
+  "cached_result_used": false,
+  "attempts": [
+    {
+      "fov_deg": 1,
+      "solved": false,
+      "seconds": 21.5,
+      "message": "Command '['C:\\\\Users\\\\zainw\\\\Documents\\\\ChatGPT\\\\graduation project\\\\tools\\\\astap\\\\astap.exe', '-f', 'C:\\\\Users\\\\zainw\\\\AppData\\\\Local\\\\Temp\\\\astrolearn-solve-7gapaag1\\\\input.fits', '-o', 'C:\\\\Users\\\\zainw\\\\AppData\\\\Local\\\\Temp\\\\astrolearn-solve-7gapaag1\\\\solution', '-d', 'C:\\\\Users\\\\zainw\\\\Documents\\\\ChatGPT\\\\graduation project\\\\tools\\\\astap', '-fov', '1.0', '-r', '180.0', '-z', '0', '-wcs', '-log', '-s', '500', '-t', '0.007', '-m', '1.5', '-speed', 'auto', '-ra', '0.0', '-spd', '90']' timed out after 20 seconds",
+      "log": ""
+    },
+    {
+      "fov_deg": 4,
+      "solved": false,
+      "seconds": 4.06,
+      "message": "No solution. Check the field of view and star database.",
+      "log": "\n7:13:07 PM  \"C:\\Users\\zainw\\Documents\\ChatGPT\\graduation project\\tools\\astap\\astap.exe\" -f C:\\Users\\zainw\\AppData\\Local\\Temp\\astrolearn-solve-8fczpsl_\\input.fits -o C:\\Users\\zainw\\AppData\\Local\\Temp\\astrolearn-solve-8fczpsl_\\solution -d \"C:\\Users\\zainw\\Documents\\ChatGPT\\graduation project\\tools\\astap\" -fov 4.0 -r 180.0 -z 0 -wcs -log -s 500 -t 0.007 -m 1.5 -speed auto -ra 0.0 -spd 90\n7:13:07 PM  Using star database D50\n7:13:07 PM  \u2588 \u2588 \u2588 \u2588 \u2588 \u2588 Warning, small image dimensions!\n7:13:07 PM  503 stars, 424 quads selected in the image. 307 database stars, 259 database quads required for the 4.00\u00b0 square search window. Step size 4.00\u00b0. Oversize 1.00\n7:13:07 PM  Spiral search: 4 threads.\n7:13:07 PM  Spiral search: 8 threads.\n7:13:07 PM  Spiral search: 10 threads.\n7:13:10 PM  No solution found!  :(\n7:13:10 PM  Warning, small image dimensions! \n"
+    },
+    {
+      "fov_deg": 0.5,
+      "solved": false,
+      "seconds": 20.22,
+      "message": "Command '['C:\\\\Users\\\\zainw\\\\Documents\\\\ChatGPT\\\\graduation project\\\\tools\\\\astap\\\\astap.exe', '-f', 'C:\\\\Users\\\\zainw\\\\AppData\\\\Local\\\\Temp\\\\astrolearn-solve-rxfy8xxs\\\\input.fits', '-o', 'C:\\\\Users\\\\zainw\\\\AppData\\\\Local\\\\Temp\\\\astrolearn-solve-rxfy8xxs\\\\solution', '-d', 'C:\\\\Users\\\\zainw\\\\Documents\\\\ChatGPT\\\\graduation project\\\\tools\\\\astap', '-fov', '0.5', '-r', '180.0', '-z', '0', '-wcs', '-log', '-s', '500', '-t', '0.007', '-m', '1.5', '-speed', 'auto', '-ra', '0.0', '-spd', '90']' timed out after 20 seconds",
+      "log": ""
+    }
+  ]
+}

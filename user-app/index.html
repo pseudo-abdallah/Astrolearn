@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AstroLearn</title>
+<link rel="stylesheet" href="style.css">
+<script src="catalog.js" defer></script>
+<script src="app.js" defer></script>
+<link rel="stylesheet" href="premium.css?v=2"><script defer src="premium.js?v=2"></script><link rel="stylesheet" href="refinements.css?v=1"><script defer src="refinements.js?v=1"></script></head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html"><span aria-hidden="true">✦</span> AstroLearn</a>
+  <nav aria-label="Main navigation"><button type="button" data-view="home">Home</button>
+    <button type="button" data-view="explore" aria-current="page">Explore</button>
+    <button type="button" data-view="sky-view">Sky</button>
+    <button type="button" data-view="images">Sessions</button>
+  <button type="button" data-view="profile">Profile</button></nav>
+  <button id="night" class="quiet" type="button" aria-pressed="false">Night mode</button>
+</header>
+<main><section id="home" aria-labelledby="home-heading">
+<div class="observation-heading"><div><span class="eyebrow">YOUR PERSONAL OBSERVATORY</span><h1 id="home-heading" tabindex="-1">Observation studio</h1></div><span class="status-chip">IMAGE PREVIEW / CAMERA PLACEHOLDER</span></div>
+<div class="instrument-status" aria-label="Observation status"><span><i id="preview-dot"></i><b id="preview-state">Preview running</b></span><span>Pointing error <b>Not measured</b></span><span>Location <b>Manual site</b></span><time id="studio-clock"></time></div>
+<div class="observation-layout"><article class="camera-panel"><div class="camera-toolbar"><span class="eyebrow">OBSERVATION VIEW</span><span>STILL IMAGE TEST</span></div><div class="camera-stage" id="camera-stage"><img id="camera-placeholder" src="jupiter-reference.jpg" alt="Jupiter reference image for testing camera overlays"><video id="live-camera" autoplay muted playsinline hidden aria-label="Future live camera feed"></video><svg id="framing-overlay" viewBox="0 0 1000 650" preserveAspectRatio="none" aria-hidden="true"><g id="overlay-grid" hidden stroke="currentColor" stroke-width="1" opacity=".3"><path d="M333 0V650M667 0V650M0 217H1000M0 433H1000"/></g><g id="overlay-crosshair" stroke="currentColor" stroke-width="1.5"><path d="M425 325H488M512 325H575M500 250V313M500 337V400"/><circle cx="500" cy="325" r="12" fill="none"/></g><g id="overlay-frame" hidden stroke="currentColor" stroke-width="1.5" fill="none"><rect x="220" y="110" width="560" height="430" rx="5" stroke-dasharray="12 7"/></g></svg><span class="camera-tag">REFERENCE IMAGE / NOT A LIVE FEED</span><div class="camera-coordinate">CENTER RETICLE<span>Overlay alignment test</span></div></div><div class="camera-options"><button id="capture-test">Save preview</button><button id="open-preview-settings">Framing &amp; parameters</button><span id="preview-mode">General preview</span></div><div class="overlay-controls" role="group" aria-label="Camera overlay controls"><button class="overlay-toggle" data-overlay="overlay-crosshair" aria-pressed="true">Crosshair</button><button class="overlay-toggle" data-overlay="overlay-grid" aria-pressed="false">Grid</button><button class="overlay-toggle" data-overlay="overlay-frame" aria-pressed="false">Frame</button><label>Zoom <input id="camera-zoom" type="range" min="1" max="3" step=".1" value="1" aria-label="Preview image zoom"></label><button id="camera-load" class="quiet">Load test image</button><input id="camera-test-file" type="file" accept="image/jpeg,image/png,image/webp" hidden></div></article>
+<aside class="object-info" id="studio-info"><div class="object-heading"><span class="planet-symbol" aria-hidden="true">&#9678;</span><div><span class="eyebrow">SOLAR SYSTEM</span><h2 id="studio-target-name">Jupiter</h2></div><span class="status-chip">REFERENCE</span></div><dl class="studio-facts"><div><dt>Type</dt><dd>Gas giant planet</dd></div><div><dt>Size</dt><dd>Largest planet</dd></div><div><dt>Moons</dt><dd>Four bright Galilean moons</dd></div><div><dt>Visibility</dt><dd>Not calculated in preview</dd></div></dl><div class="object-story"><span class="eyebrow">UNDERSTAND WHAT YOU SEE</span><p id="studio-description">Jupiter is the largest planet in our Solar System. Its bright zones and darker belts are bands of cloud shaped by powerful atmospheric winds. The Great Red Spot is a vast, long-lived storm.</p><p class="observation-tip"><b>Observation tip</b> Look for the cloud belts and the four Galilean moons. This reference image is used to test framing and overlays.</p></div><span class="reference-credit">Reference image from the local solar-system test set.</span></aside></div>
+<div class="instrument-actions"><button data-open="explore"><span aria-hidden="true">&#8982;</span>Targets</button><button id="studio-info-toggle" aria-expanded="true" aria-controls="studio-info"><span aria-hidden="true">&#9432;</span>Info</button><button id="studio-audio" aria-pressed="false"><span aria-hidden="true">&#9835;</span>Audio</button><button id="studio-night"><span aria-hidden="true">&#9790;</span>Night mode</button><button id="studio-stop" class="studio-stop"><span aria-hidden="true">&#9632;</span>Pause preview</button></div><p id="studio-feedback" role="status" class="hint">Test image loaded. Toggle the crosshair, grid, and frame to test the camera overlays.</p>
+</section>
+  <section id="explore" hidden aria-labelledby="explore-heading">
+    <div class="page-title"><div><h1 id="explore-heading" tabindex="-1">Explore the sky</h1><p>Find a target for your next observation.</p></div><button id="settings-toggle" class="quiet" type="button" aria-expanded="false" aria-controls="observer">Site &amp; time</button></div>
+    <form id="observer" class="panel settings" hidden>
+      <label>Latitude <input id="latitude" type="number" min="-90" max="90" step="any" required value="29.3759"></label>
+      <label>Longitude <input id="longitude" type="number" min="-180" max="180" step="any" required value="47.9774"></label>
+      <label>Time on this device <input id="when" type="datetime-local"></label>
+      <button class="primary" type="submit">Update sky</button>
+    </form>
+    <div class="explore-grid">
+      <div class="panel targets">
+        <div class="card-head"><h2>Targets</h2><span class="tag" id="site-label"></span></div>
+        <label class="sr-only" for="search">Search targets</label><input id="search" type="search" placeholder="Search by name, e.g. Vega">
+        <div class="filters" role="group" aria-label="Filter targets">
+          <button type="button" data-filter="visible" aria-pressed="true">Above horizon</button>
+          <button type="button" data-filter="all" aria-pressed="false">All targets</button>
+          <button type="button" data-filter="saved" aria-pressed="false">Favorites</button>
+        </div>
+        <label class="sr-only" for="category">Object type</label><select id="category"><option value="">All object types</option><option>Star</option><option>Galaxy</option><option>Nebula</option><option>Cluster</option></select><button class="quiet" id="open-target-filters">Advanced filters</button><p class="hint" id="results-count" role="status"></p>
+        <ul id="target-list" class="target-list"></ul>
+      </div>
+    </div>
+    <article id="target-detail" class="panel detail" aria-labelledby="detail-title" hidden>
+      <div class="card-head"><h2 id="detail-title" tabindex="-1"></h2><button id="favorite" class="quiet" type="button" aria-pressed="false">Favorite</button></div>
+      <p id="detail-description"></p><p id="detail-position" class="hint"></p>
+      <button id="set-target" class="primary" type="button">Use in Observe</button>
+    </article>
+    <p class="hint">Estimated positions for catalog objects. Visibility depends on darkness, weather and your surroundings.</p>
+  </section>
+  <section id="sky-view" hidden aria-labelledby="sky-view-heading"><div class="page-title"><div><h1 id="sky-view-heading" tabindex="-1">Your sky, mapped</h1><p>Predicted catalog positions for your observer site and time.</p></div><button class="button secondary" data-open="explore">Find a target</button></div>      <div class="panel atlas"><div class="atlas-controls" role="group" aria-label="Sky map layers"><button id="atlas-grid" aria-pressed="true">Grid</button><button id="atlas-labels" aria-pressed="true">Labels</button><button id="atlas-frame" aria-pressed="false">Frame</button><button id="atlas-guide">Alignment guide</button></div>
+        <div class="card-head"><h2>Sky atlas</h2><span class="tag" id="sky-time"></span></div>
+        <canvas id="sky" width="500" height="500" aria-hidden="true"></canvas>
+        <p class="hint">Center is overhead. The outer circle is the horizon. Browse the target list for coordinates.</p>
+      </div>
+</section><section id="profile" hidden aria-labelledby="profile-heading"><h1 id="profile-heading" tabindex="-1">Your observatory</h1><article class="panel"><div class="settings-row"><div><h2>Night vision</h2><p>Switch to red light for low-light observing.</p></div><button class="button secondary" id="profile-night">Toggle night mode</button></div><div class="settings-row"><div><h2>Observer site &amp; time</h2><p>Set your coordinates and observation time to personalize sky predictions.</p></div><button class="button secondary" id="profile-location">Edit observer settings</button></div><div class="settings-row"><div><h2>Equipment</h2><p>No telescope or camera connected. Upload photographs from Observe.</p></div><button class="button secondary" data-open="observe">Open observation studio</button></div><div class="settings-row"><div><h2>Support &amp; diagnostics</h2><p>Describe a problem and export a local diagnostic report.</p></div><button id="open-support" class="button secondary">Create report</button></div></article></section><section id="observe" aria-labelledby="observe-heading" hidden>
+    <div class="page-title"><div><h1 id="observe-heading" tabindex="-1">Observe</h1><p>Review a sky image alongside your selected target.</p></div><span class="tag">Image preview</span></div>
+    <div class="observe-grid">
+      <article class="panel">
+        <div class="card-head"><h2>Sky image</h2><button class="quiet upload" type="button">Add image</button></div>
+        <figure class="image-view"><img id="preview" src="moon.png" alt="Moon reference mosaic"><figcaption id="image-caption">Reference image · NASA / LRO</figcaption></figure>
+      </article>
+      <article class="panel">
+        <h2>Selected target</h2><p id="observe-target">Choose a target from Explore.</p><p id="observe-facts" class="hint"></p>
+        <button id="back-explore" class="quiet" type="button">Browse targets</button>
+        <p class="hint">Your selected target is a viewing reference. Image identification and telescope control are unavailable in this prototype.</p>
+      </article>
+    </div>
+  </section>
+  <section id="images" aria-labelledby="images-heading" hidden>
+    <div class="page-title"><div><h1 id="images-heading" tabindex="-1">Images</h1><p>Browse images added in this session.</p></div><button class="primary upload" type="button">Add image</button></div>
+    <p id="image-status" role="status"></p>
+    <p class="hint">Images are kept in this browser session. Export important previews before reloading.</p><div id="gallery" class="gallery"></div>
+  </section>
+  <input id="image-file" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+  <p id="upload-status" class="hint" role="status"></p>
+<dialog id="ui-sheet"><div class="sheet-heading"><h2 id="sheet-title"></h2><button id="close-sheet" aria-label="Close panel">Close</button></div><div id="sheet-content"></div></dialog></main>
+</body>
+</html>
+
+

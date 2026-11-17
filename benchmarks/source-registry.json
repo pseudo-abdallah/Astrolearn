@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "purpose": "candidate sources for a telescope-like benchmark, not a downloaded or licensed training collection",
+  "sources": [
+    {"id":"pvol","url":"https://pvol2.ehu.eus/","paper":"https://arxiv.org/abs/1701.01977","priority":1,"role":"Earth-based amateur planet, Moon and Galilean-satellite observations","state":"source identified; website timed out in this session","reuse":"check each record's attribution and data-use terms before collecting or training"},
+    {"id":"alpo-japan","url":"https://alpo-j.sakura.ne.jp/Contents/homeE.htm","priority":2,"role":"additional planetary observations and independent observers","state":"reference only; permission required by site","reuse":"do not import images or use them for ML without applicable permission"},
+    {"id":"sky-simulator","url":"https://sky-simulator.sourceforge.io/","priority":2,"role":"camera, mount and focuser workflow simulation with ASCOM/Alpaca/INDI","state":"not installed; optional simulator","reuse":"follow the program and bundled-data licenses"},
+    {"id":"nasa-skyview","url":"https://skyview.gsfc.nasa.gov/current/docs/batchpage.html","priority":1,"role":"calibrated reference star fields with independent WCS","state":"one local DSS reference field present; not a planetary close-up archive","reuse":"retain FITS survey provenance and copyright notices"},
+    {"id":"jpl-satellites","url":"https://ssd.jpl.nasa.gov/sats/ephem/files.html","priority":1,"role":"offline satellite ephemerides and body-center geometry","state":"satellite packs not installed; existing DE421 covers our Moon","reuse":"retain JPL provenance, version, coverage and checksum"},
+    {"id":"nasa-reference-images","url":"https://nssdc.gsfc.nasa.gov/imgcat/","priority":3,"role":"reference/educational imagery; spacecraft domain-shift checks","state":"not representative of ordinary ground-based telescope camera output","reuse":"check per-image credits; do not assume all hosted imagery has identical reuse terms"}
+  ],
+  "required_per_image": ["source_url","source_id","observer","observation_utc_or_unknown","filter_or_unknown","telescope_or_unknown","camera_or_unknown","processing_level","label_evidence","rights_status","parent_sha256","group_id","split"],
+  "split_unit": "observer and observing session; all video frames, crops, rotations and simulated derivatives stay in the original's split",
+  "initial_target_independent_frames": {"moon":40,"jupiter":40,"saturn":30,"mars":20,"venus":20,"mercury":10,"uranus":5,"neptune":5,"negatives":30,"jupiter_moon_systems":40,"saturn_titan_systems":10,"calibrated_star_fields":50},
+  "count_note": "300 independent source images is a proposed collection target, not current inventory. Derivatives do not increase independent source counts."
+}

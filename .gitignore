@@ -1,3 +1,19 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.env
+/data/
+downloads/
+tools/astap/
+resources/de421.bsp
+tools/siril/
+resources/siril/
+resources/solar-model/
+resources/ephemerides/*.bsp
+resources/ephemerides/*.json
+tmp/
+
 # Local secrets
 .env
 .env.*
@@ -23,3 +39,10 @@ model_weights/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Local archives and helper tooling
+/*.zip
+/report-access/
+/samples/AstroLearn-plate-solving-test-set/
+/samples/*.zip
+/samples/plate-solving-test-set/raw/

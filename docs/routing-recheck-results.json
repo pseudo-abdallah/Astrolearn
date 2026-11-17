@@ -1,0 +1,48 @@
+[
+  {
+    "image_id": "134b095c6d4a40d9b553fc85668f576f",
+    "analysis_id": "4d00184207954bddaea3e1058c90e7e2",
+    "status": "completed",
+    "kind": "field",
+    "plate_status": "solved",
+    "solver": "ASTAP",
+    "message": "Image analysis complete.",
+    "objects": [
+      "Canopus"
+    ],
+    "visual_status": null
+  },
+  {
+    "image_id": "f0a3f340cbe04ef09477a5462c01fc5b",
+    "analysis_id": "8fb83fed988947649b074a13bad4311c",
+    "status": "completed",
+    "kind": "closeup",
+    "plate_status": "failed",
+    "solver": null,
+    "message": "No local solver found a solution. Check the diagnostic log and image hints.",
+    "objects": [],
+    "visual_status": "unknown"
+  },
+  {
+    "image_id": "2e330d3381c148a39a3458c611403189",
+    "analysis_id": "3737d74baa5742a89335ab0639fa1426",
+    "status": "completed",
+    "kind": "closeup",
+    "plate_status": "failed",
+    "solver": null,
+    "message": "No local solver found a solution. Check the diagnostic log and image hints.",
+    "objects": [],
+    "visual_status": "unknown"
+  },
+  {
+    "image_id": "5884442026034a2eadfd7088d7fb9770",
+    "analysis_id": "a1b1fbb88d194af1971cfff9f20af288",
+    "status": "completed",
+    "kind": "closeup",
+    "plate_status": "failed",
+    "solver": null,
+    "message": "No local solver found a solution. Check the diagnostic log and image hints.",
+    "objects": [],
+    "visual_status": "unknown"
+  }
+]

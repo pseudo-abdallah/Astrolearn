@@ -1,0 +1,142 @@
+{
+  "independent_survey_fields": 4,
+  "source": "STScI Digitized Sky Survey, DSS2 red",
+  "cases": [
+    {
+      "file": "vega-survey.fits",
+      "field": "vega",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=279.2347&d=38.7837&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "c49538467898011d158662702bfbeed2278788f5b022c767d97776d8a65a14b0",
+      "expected": "solved",
+      "expected_ra_deg": 279.23491111675463,
+      "expected_dec_deg": 38.783746939293934,
+      "tolerance_deg": 0.02,
+      "workflow": "automatic",
+      "options": {}
+    },
+    {
+      "file": "vega-pixels.png",
+      "field": "vega",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=279.2347&d=38.7837&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "2229ab33dde2b399d4aff8a7f27c4335bba68a0365434ea8699e7fb669baec1a",
+      "expected": "solved",
+      "expected_ra_deg": 279.23491111675463,
+      "expected_dec_deg": 38.783746939293934,
+      "tolerance_deg": 0.02,
+      "workflow": "manual-hints",
+      "options": {
+        "ra_deg": 279.23491111675463,
+        "dec_deg": 38.783746939293934,
+        "fov_deg": 0.9988358522393124,
+        "radius_deg": 2
+      }
+    },
+    {
+      "file": "pleiades-survey.fits",
+      "field": "pleiades",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=56.75&d=24.1167&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "71c98bf3f0d2c465fcfcc953411c312ab94bc2b023d25bd7db76acc7e55848c6",
+      "expected": "solved",
+      "expected_ra_deg": 56.75028006519553,
+      "expected_dec_deg": 24.11662787709552,
+      "tolerance_deg": 0.02,
+      "workflow": "automatic",
+      "options": {}
+    },
+    {
+      "file": "pleiades-pixels.png",
+      "field": "pleiades",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=56.75&d=24.1167&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "22b966c262aa61baf26d972884745e07762e5bb75c4e5839e12864f273aa4481",
+      "expected": "solved",
+      "expected_ra_deg": 56.75028006519553,
+      "expected_dec_deg": 24.11662787709552,
+      "tolerance_deg": 0.02,
+      "workflow": "manual-hints",
+      "options": {
+        "ra_deg": 56.75028006519553,
+        "dec_deg": 24.11662787709552,
+        "fov_deg": 0.9987649369066786,
+        "radius_deg": 2
+      }
+    },
+    {
+      "file": "andromeda-survey.fits",
+      "field": "andromeda",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=10.6847&d=41.269&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "8aa09371612c91d141942ee28845ab5ae6a438a06c458245e18061d3e96b440c",
+      "expected": "solved",
+      "expected_ra_deg": 10.684776576818384,
+      "expected_dec_deg": 41.26910486750509,
+      "tolerance_deg": 0.02,
+      "workflow": "automatic",
+      "options": {}
+    },
+    {
+      "file": "andromeda-pixels.png",
+      "field": "andromeda",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=10.6847&d=41.269&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "3cebefbd49970465208fed5afa0b5e292c7565a6dc2ec7157fc84c4bb7a76412",
+      "expected": "solved",
+      "expected_ra_deg": 10.684776576818384,
+      "expected_dec_deg": 41.26910486750509,
+      "tolerance_deg": 0.02,
+      "workflow": "manual-hints",
+      "options": {
+        "ra_deg": 10.684776576818384,
+        "dec_deg": 41.26910486750509,
+        "fov_deg": 0.9985300693251089,
+        "radius_deg": 2
+      }
+    },
+    {
+      "file": "orion-nebula-survey.fits",
+      "field": "orion-nebula",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=83.8221&d=-5.3911&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "0b94b564f709255169a333fa6abb9de1081c234b624ab52c3a36342cbf1fedcd",
+      "expected": "solved",
+      "expected_ra_deg": 83.82228795265405,
+      "expected_dec_deg": -5.391034593482671,
+      "tolerance_deg": 0.02,
+      "workflow": "automatic",
+      "options": {}
+    },
+    {
+      "file": "orion-nebula-pixels.png",
+      "field": "orion-nebula",
+      "type": "real DSS survey",
+      "source_url": "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=83.8221&d=-5.3911&e=J2000&h=60&w=60&f=fits&c=none",
+      "sha256": "9356ac96d419212caa7085fe0e4feee8cf2599fa104b1458c939ebf4e441c7ca",
+      "expected": "solved",
+      "expected_ra_deg": 83.82228795265405,
+      "expected_dec_deg": -5.391034593482671,
+      "tolerance_deg": 0.02,
+      "workflow": "manual-hints",
+      "options": {
+        "ra_deg": 83.82228795265405,
+        "dec_deg": -5.391034593482671,
+        "fov_deg": 0.9991180326624096,
+        "radius_deg": 2
+      }
+    },
+    {
+      "file": "blank.png",
+      "type": "negative control",
+      "expected": "unsolved",
+      "options": {}
+    },
+    {
+      "file": "random-noise.png",
+      "type": "negative control",
+      "expected": "unsolved",
+      "options": {}
+    }
+  ]
+}
